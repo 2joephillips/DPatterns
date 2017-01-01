@@ -1,4 +1,10 @@
 # Footer navigation links
 
-- title:
-  url:
+- title: Overview
+  url: /overview
+- title: Creational
+  url: /creational
+- title: Structural
+  url: /structural
+- title: Behavioral
+  url: /behavioral

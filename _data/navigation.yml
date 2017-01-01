@@ -4,3 +4,15 @@
   url: /overview
   excerpt: 'What am I trying to do?'
   image:
+- title: Creational
+  url: /creational
+  excerpt: 'Creating that Object'
+  image: 
+- title: Structural
+  url: /structural
+  excerpt: 'Building that Relationship'
+  image: 
+- title: Behavioral
+  url: /behavioral
+  excerpt: 'Developing that Communication'
+  image: 
