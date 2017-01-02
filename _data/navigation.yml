@@ -3,16 +3,16 @@
 - title: Overview
   url: /overview
   excerpt: 'What am I trying to do?'
-  image:
+  image: nav/400x250.png
 - title: Creational
   url: /creational
   excerpt: 'Creating that Object'
-  image: 
+  image: nav/400x250.png
 - title: Structural
   url: /structural
   excerpt: 'Building that Relationship'
-  image: 
+  image: nav/400x250.png
 - title: Behavioral
   url: /behavioral
   excerpt: 'Developing that Communication'
-  image: 
+  image: nav/400x250.png
