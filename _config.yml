@@ -25,9 +25,9 @@ gems:
 
 
 # Site owner
-owner: 2joephillips
-  name: Joseph E Phillips
-  email: joseph@josephephillips.com
+owner: "2joephillips"
+  name: "Joseph E Phillips"
+  email: "joseph@josephephillips.com"
   twitter:
   google:
     ad-client:
