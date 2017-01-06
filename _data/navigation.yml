@@ -3,7 +3,7 @@
 - title: Overview
   url: /overview
   excerpt: 'What am I trying to do?'
-  image: 400x250.png
+  image: nav/400x250.png
 - title: Creational
   url: /creational
   excerpt: 'Creating that Object'
