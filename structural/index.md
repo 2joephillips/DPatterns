@@ -1,5 +1,13 @@
 ---
-layout: default
+layout: archive
+
 title: Structural
 ---
-Structural
+
+
+
+<div class="tiles">
+{% for post in site.categories.structural reversed%}
+  {% include post-grid.html %}
+{% endfor %}
+</div><!-- /.tiles -->
