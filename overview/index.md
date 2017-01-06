@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Overview
+share: false
 ---
 What is DPatterns? What is the purpose of this? 
 
