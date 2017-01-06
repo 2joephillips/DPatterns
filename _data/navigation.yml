@@ -7,12 +7,12 @@
 - title: Creational
   url: /creational
   excerpt: 'Creating that Object'
-  image: nav/400x250.png
+  image: nav/400X250.png
 - title: Structural
   url: /structural
   excerpt: 'Building that Relationship'
-  image: nav/400x250.png
+  image: nav/400X250.png
 - title: Behavioral
   url: /behavioral
   excerpt: 'Developing that Communication'
-  image: nav/400x250.png
+  image: nav/400X250.png
