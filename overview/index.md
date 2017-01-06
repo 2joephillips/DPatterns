@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: Overview
 ---
 What is DPatterns? What is the purpose of this? 
