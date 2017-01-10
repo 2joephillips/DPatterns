@@ -11,6 +11,6 @@ image:
   thumb:
 ---
 
-Javascript - Example
+<a href="{{ site.url }}/behavioral/state" class="btn">Return</a>
 
-{{ page | inspect }}
+TEST

@@ -2,7 +2,7 @@
 layout: article
 title: State - C Sharp Example
 modified:
-catagories: state
+catagories: behavioral
 excerpt: 
 tags: []
 image:
@@ -11,7 +11,6 @@ image:
   thumb:
 ---
 
+<a href="{{ site.url }}/behavioral/state" class="btn">Return</a>
 
-Example C Sharp
-
-{{ page | inspect }}
+TEST
