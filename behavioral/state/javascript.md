@@ -1,8 +1,8 @@
 ---
 layout: article
-title: State - Javascript Example
+title: State Javascript Example
 modified:
-categories: behavioral
+categories: 
 excerpt: 
 tags: []
 image:
@@ -11,6 +11,6 @@ image:
   thumb:
 ---
 
-<a href="{{ site.url }}/behavioral/state" class="btn">Return</a>
+<a href="{{ site.url }}/behavioral/state" class="btn"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Return to State Pattern</a>
 
-TEST
+<a href="https://github.com/2joephillips/DPatterns-Examples/tree/master/behavioral/state/javascript" target="_blank">Javascript Code Base</a>

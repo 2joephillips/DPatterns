@@ -11,7 +11,7 @@
 	padding: 8px 20px;
 	@include font-size(14);
 	font-family: $alt-font;
-	background-color: $primary-color;
+	background-color: #006699;
 	color: $white;
 	text-decoration: none;
 	border: 0 !important;
@@ -19,7 +19,7 @@
 	@include transition(background 0.2s, border 0.2s);
 	&:hover {
 		color: $white;
-		background-color: lighten($primary-color, 10);
+		background-color: lighten($primary-color, 20);
 	}
 	&:active {
 		// move button slightly on click
