@@ -48,8 +48,8 @@ namespace StateMachineDemo
     }
 }
 ```
-## TrafficLight Class
 
+## TrafficLight Class
 In this example, the context class is our <code>TrafficLight</code> class. This class manages the objects current state with an instance of our <code> ITrafficLightState </code> class called <code>State</code>. 
 The class also exposes it's "default"  behavior. In this case, it exposes the methods; <code>Change()</code> <code>Wait()</code> <code>ReportState()</code>. 
 
