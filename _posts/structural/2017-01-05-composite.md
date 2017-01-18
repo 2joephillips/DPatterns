@@ -33,3 +33,10 @@ The UML class diagram above describes an implementation of the Composite design 
 
 
 ![Example]({{ site.url }}/images/patterns/composite-feature.png)
+# Example 
+
+A good example of the Composite Pattern is a team/division hierarchy. Each worker is part of a team, and that team can be part of a larger team. 
+Some workers can be Supervisors. 
+The link below show an example of an implementation of an application that assigns workers to teams, and prints out the workers preformance rating.
+
+[C# Example]({{ site.url }}/structural/composite/csharp/)
