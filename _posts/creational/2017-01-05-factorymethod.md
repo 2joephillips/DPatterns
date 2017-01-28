@@ -9,4 +9,5 @@ image:
   feature:
   teaser: nav/400X250.png
   thumb:
+published: false
 ---
