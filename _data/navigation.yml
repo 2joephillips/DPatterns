@@ -1,9 +1,5 @@
 # Site navigation links
 
-- title: Overview
-  url: /overview
-  excerpt: 'What am I trying to do?'
-  image: overview.jpg
 - title: Creational
   url: /creational
   excerpt: 'Creating that Object'

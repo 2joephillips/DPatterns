@@ -1,7 +1,5 @@
 # Footer navigation links
 
-- title: Overview
-  url: /overview
 - title: Creational
   url: /creational
 - title: Structural
