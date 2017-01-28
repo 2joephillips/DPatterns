@@ -19,6 +19,8 @@ To set-up this example,  ASP.NET core is used create a Console Application. The 
 {% include toc.html %}
 
 ## Set-up
+This simple console app is used to compile workers with thier rating into teams that have supervisors. Each Team has the ability to print out the ratings of each 
+worker within the team. In the scenario below we build a team 1 and then add it to another team to show how composite works. Then print all the workers ratings.
 
 ```csharp
 using System;
@@ -39,12 +41,16 @@ namespace CompositeDemo
             
             Employee alpha = new Employee { ID = 7, Name="Alpha 5", Rating = 4};
             Employee zordon = new Employee {ID = 8, Name="Zordon", Rating = 5};
+
+            //Build Team and Set-Supervisor
             Team team1 = new Team { Name= "Team 1", Supervisor = alpha, 
                 Workers = {jason, trini, zach, kimberly, billy, rose}};
-
+            
+            //Build Team Include Team 1 and alpha as a worker  under this team and Supervisor.
             Team powerTeam = new Team { Name="PowerTeam", Supervisor = zordon, 
                 Workers = {alpha, team1}};
 
+            //Print out Power Teams Preformance Summary    
             powerTeam.PerformaceSummary();
         }
     }
@@ -53,6 +59,10 @@ namespace CompositeDemo
 
 
 ## IEmployee
+
+The IEmployee class is the Component part of the Composite pattern. It declares the interface objects by implementing the default behavior common to all classes.
+In this case every instance will have an ID, Name, and the ability to provide a Performace Summary. 
+
 ```csharp
 namespace CompositeDemo
 {
@@ -65,6 +75,9 @@ namespace CompositeDemo
 ```
 
 ## Employee
+
+The Employee class is the Leaf representation. In this case an Employee will never have children.
+
 ```csharp
 using System;
 
@@ -83,6 +96,10 @@ namespace CompositeDemo
 ```
 
 ## Team
+
+The Team class is the Composite implementation of the IEmployee Class. The team has children and stores child components. In this scenario, it contains a list of IEmployee. This can be a single Employee
+or another Team. 
+
 ```csharp
 using System;
 using System.Collections.Generic;
