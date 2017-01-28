@@ -41,3 +41,5 @@ Some workers can be Supervisors.
 The link below show an example of an implementation of an application that assigns workers to teams, and prints out the workers preformance rating.
 
 [C# Example]({{ site.url }}/structural/composite/csharp/)
+
+[Javscript Example]({{ site.url }}/structural/composite/javascript/)
