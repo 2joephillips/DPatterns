@@ -19,7 +19,7 @@ To set-up this example,  ASP.NET core is used create a Console Application. The 
 {% include toc.html %}
 
 ## Set-up
-This simple console app is used to compile workers with thier rating into teams that have supervisors. Each Team has the ability to print out the ratings of each 
+This simple console app is used to compile workers with thier rating into teams that have supervisors. With the ability to print out the ratings of each 
 worker within the team. In the scenario below we build a team 1 and then add it to another team to show how composite works. Then print all the workers ratings.
 
 ```csharp
