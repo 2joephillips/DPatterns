@@ -7,7 +7,7 @@ excerpt: "Create different types of concrete objects"
 tags: []
 image:
   feature:
-  teaser: nav/400X250.png
+  teaser: patterns/abstractFactory.jpg
   thumb:
 published: true
 ---
@@ -32,4 +32,13 @@ The UML class diagram above describes an implementation of the Abstract Factory 
 * **Abstract Product** declares an interface for a type of product.
 * **Product** defines a product object to be created by the corresponding concrete factory and implements the Abstract Product interface.
 
+![Example]({{ site.url }}/images/patterns/abstractFactory-feature.jpg)
 
+# Example 
+A pizza resturant can make differnt styles of pizza. They can make New York style or Chicago style. So, a cheese pizza will look different for a New York
+style versus a Chicago style. The below examples will show how to use the Abstract Factory to create a system for implementing this type of system.
+
+ [C# Example]({{ site.url }}/creational/abstractFactory/csharp/)
+
+
+ [Javascript Example]({{ site.url }}/creational/abstractFactory/javascript/)
