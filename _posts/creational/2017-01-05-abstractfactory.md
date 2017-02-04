@@ -19,8 +19,7 @@ published: true
 * Separate object creation from the decision of which object to create
 * Add new products and functionality without breaking Open Closed Principle
 
-The Abstract Factory defines a Factory Method that encapsulates the <code>new</code> operator and the concrete, platform-specific, 
-product classes. Each "platform" is then modeled with a Factory derived class. 
+The purpose of the Abstract Factory is to provide an interface for creating families of related objects, without specifying concrete classes.
 
 # Structure
 
