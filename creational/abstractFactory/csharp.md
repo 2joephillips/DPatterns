@@ -22,7 +22,11 @@ To set-up this example,  ASP.NET core is used create a Console Application. The 
 ## Set-up
 Within this application, <code>Main()</code>, is used to print out several commands and new up the type of 
 pizza, provide a list of pizzas that each type has, and places an order for a specific type of pizza.  
-For this example there are two types of pizza Chicago and New York style.
+For this example there are two types of pizza Chicago and New York style. These types are our Concrete Factories for our Abstract Factory IPizzaStore.
+Each Concrete Factory is able to create a concrete Product/pizza from our IPizza Abstract Product class.
+
+To help in organization I have used two folders to organize the code. Our Interfaces used for abstraction are within an Contracts folder giving it the namespace
+AbstractFactoryPattern.Contracts, and the concrete classes are in AbstractFactoryPattern.Services.
 
 ```csharp
 using System;
@@ -63,3 +67,11 @@ namespace AbstractFactoryPattern
     }
 }
 ```
+
+## Abstract Factory
+
+## Concrete Factory
+
+## Abstract Product
+
+## Product
