@@ -58,7 +58,7 @@ namespace CompositeDemo
 ```
 
 
-## IEmployee
+## Component
 
 The IEmployee class is the Component part of the Composite pattern. It declares the interface objects by implementing the default behavior common to all classes.
 In this case every instance will have an ID, Name, and the ability to provide a Performace Summary. 
@@ -74,7 +74,7 @@ namespace CompositeDemo
 }
 ```
 
-## Employee
+## Leaf
 
 The Employee class is the Leaf representation. In this case an Employee will never have children.
 
@@ -95,7 +95,7 @@ namespace CompositeDemo
 }
 ```
 
-## Team
+## Composite
 
 The Team class is the Composite implementation of the IEmployee Class. The team has children and stores child components. In this scenario, it contains a list of IEmployee. This can be a single Employee
 or another Team. 

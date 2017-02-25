@@ -55,7 +55,7 @@ namespace StateMachineDemo
 }
 ```
 
-## ITrafficLight Class
+## Context Interface
 The simple interface <code>ITrafficLight</code> manages the "default" behavior that is exposed to the client.
 
 ```csharp
@@ -68,7 +68,7 @@ namespace StateMachineDemo{
 }
 ```
 
-## TrafficLight Class
+## Context
 In this example, the context class is our <code>TrafficLight</code> class, but we still use an interface <code>ITrafficLight</code> to manage default behavior. 
 The <code>TrafficLight</code> class manages the objects current state with a private instance of our <code> ITrafficLightState </code> class called <code>State</code>. 
 When the class is newed-up from the client, the constructor sets its state to the <code> RedLight </code> state.
@@ -108,7 +108,7 @@ namespace StateMachineDemo
 }
 ```
 
-## ITrafficLightState Class
+## State
 The simple interface <code>ITrafficLightState</code> manages the "default" behavior that is used within the concrete states.
 
 ```csharp
