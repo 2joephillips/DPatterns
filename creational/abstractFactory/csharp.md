@@ -69,7 +69,10 @@ namespace AbstractFactoryPattern
 ```
 
 ## Abstract Factory
-* **Abstract Factory** declares an interface for operations that create abstract products.
+
+In the IPizzaStore class we declare the interface for operations that create abstract products. In this case
+the store can list pizzas and order a pizza by taking a string. The method <code>orderPizza</code> returns an IPizza which is the 
+Abstract Product implementation needed to create the concrete pizza.
 
 ```csharp
 namespace AbstractFactoryPattern.Contracts {
@@ -81,7 +84,10 @@ namespace AbstractFactoryPattern.Contracts {
 ```
 
 ## Concrete Factory
-* **Concrete Factory** implements the operations to create concrete product objects.
+
+The two concrete factories (Chicago and New York Style) implement the operations <code>orderPizza</code> and <code>listPizza</code> that comprise the IPizzaStore.
+Each class maintains there list of <code>Pizzas</code>. This could be more complex than a <code>List&lt;String></code>. The <code>orderPizza</code>
+method takes a string, in this case a name of pizza, and returns a Concrete Product class. 
 
 ### Chicago Style
 ```csharp
@@ -135,7 +141,7 @@ public class ChicagoStylePizza : IPizzaStore
 ```
 
 ## Abstract Product
-* **Abstract Product** declares an interface for a type of product.
+In the interface we declare a simple <code>createPizza</code> class. This class will be used by our concrete products. 
 
 ```csharp
 namespace AbstractFactoryPattern.Contracts {
@@ -146,7 +152,8 @@ namespace AbstractFactoryPattern.Contracts {
 ```
 
 ## Product
-* **Product** defines a product object to be created by the corresponding concrete factory and implements the Abstract Product interface.
+Our concrete products implement our IPizza interface that has the single  <code>createPizza</code>. The below four classes return a simple writeline 
+for the type of pizza being created.
 
 ### Chicago Style Pizzas
 ```csharp
