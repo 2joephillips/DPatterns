@@ -69,9 +69,115 @@ namespace AbstractFactoryPattern
 ```
 
 ## Abstract Factory
+* **Abstract Factory** declares an interface for operations that create abstract products.
+
+```csharp
+namespace AbstractFactoryPattern.Contracts {
+    interface IPizzaStore{
+        void listPizzas();
+        IPizza orderPizza(string type);
+    }
+}
+```
 
 ## Concrete Factory
+* **Concrete Factory** implements the operations to create concrete product objects.
+
+### Chicago Style
+```csharp
+public class ChicagoStylePizza : IPizzaStore
+    {
+        List<String> Pizzas = new List<String>() {"Deep Dish Pizza", "Stuffed Pizza"};
+        public IPizza orderPizza(string type)
+        {
+            if(type == "Deep Dish"){
+                return new DeepDishPizza();
+            }
+            else {
+                return new StuffedPizza();
+            }
+        }
+
+        public void listPizzas()
+        {
+            Console.WriteLine("The following Chicago Style Pizzas are available");
+            foreach(string pizza in Pizzas){
+                Console.WriteLine(pizza);
+            }
+            Console.WriteLine(Environment.NewLine);
+        }
+    }
+```
+### New York Style
+```csharp
+ public class NewYorkStylePizza : IPizzaStore
+    {
+        List<String> Pizzas = new List<String>() {"Hand-tossed Pizza", "Thin-crust Pizza"};
+        public IPizza orderPizza(string type)
+        {
+            if(type == "HandTossed"){
+                return new HandTossedPizza();
+            }
+            else {
+                return new ThinCrustPizza();
+            }
+        }
+
+        public void listPizzas()
+        {
+            Console.WriteLine("The following Chicago Style Pizzas are available" );
+            foreach(string pizza in Pizzas){
+                Console.WriteLine(pizza);
+            }
+            Console.WriteLine(Environment.NewLine);
+        }
+    }
+```
 
 ## Abstract Product
+* **Abstract Product** declares an interface for a type of product.
+
+```csharp
+namespace AbstractFactoryPattern.Contracts {
+    public interface IPizza{
+        void createPizza();
+    }
+}
+```
 
 ## Product
+* **Product** defines a product object to be created by the corresponding concrete factory and implements the Abstract Product interface.
+
+### Chicago Style Pizzas
+```csharp
+    public class DeepDishPizza : IPizza{
+        public void createPizza(){
+            Console.WriteLine("Deep Dish Pizza");
+        }
+    }
+```
+
+```csharp
+    public class StuffedPizza : IPizza{
+        public void createPizza(){
+            Console.WriteLine("Stuffed Pizza");
+        }
+    }
+```
+
+### New York Style Pizzas
+```csharp
+    public class HandTossedPizza : IPizza{
+        public void createPizza(){
+            Console.WriteLine("Hand-tossed Pizza");
+        }
+    }
+```
+
+```csharp
+    public class ThinCrustPizza : IPizza{
+        public void createPizza(){
+            Console.WriteLine("Thin-crust Pizza");
+        }
+    }
+```
