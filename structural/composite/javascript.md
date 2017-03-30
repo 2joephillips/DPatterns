@@ -24,12 +24,44 @@ Javascript Code Base</a> can be accessed from GitHub.
 ## Set-up
 This simple web page  is used to compile workers with thier rating into teams that have supervisors. With the ability to print out the ratings of each worker within the team. In the scenario below we build a team 1 and then add it to another team to show how composite works. Then print all the workers ratings.
 
+```javascript
+ document.write("Build Employees <br>")
+ var jason = new Employee('Jason Lee Scott',3);
+ var trini = new Employee ('Trini Kwan',4);
+ var zach = new Employee ('Zach Taylor',5);
+ var kimberly = new Employee ('Kimberly Ann Hart',3);
+ var billy = new Employee ('Billy Cranston',4);
+ var rose = new Employee ('Tommy Oliver',5);
+ var alpha = new Employee ('Alpha',5);
+ var zordon = new Employee ('Zordon',5);
+
+ document.write("Build Team1 <br>")
+ var team1 = new Team();
+ team1.setUp("team1",alpha);
+ team1.add(jason);
+ team1.add(trini);
+ team1.add(zach);
+ team1.add(kimberly);
+ team1.add(billy);
+ team1.add(rose);
+ 
+ document.write("Build PowerTeam <br><br>")
+ var powerTeam = new Team();
+ powerTeam.setUp("PowerTeam",zordon)
+ powerTeam.add(alpha);
+ powerTeam.add(team1);
+ 
+ document.write("Start Performance Summaries <br>")
+ powerTeam.performanceSummary();
+```
+
+
 ## Component
 
 The Team function is the Component part of the Composite pattern. It declares the interface objects by implementing the default behavior common to all Composite objects.
 
 
-```csharp
+```javascript
 var Team = function(name, supervisor){
     this._employees = [];
     this.name = name;
