@@ -29,27 +29,27 @@ This simple web page  is used to compile workers with thier rating into teams th
 
 The Team function is the Component part of the Composite pattern. It declares varabiles for giving the team a name, array for employees, and the name of the supervisor. It also creates methods for adding new employees, setting up the team with a name and supervisor, and displaying the teams performance summary. 
 
-
 ```javascript
-    var Team = function () {
-        var _employees = [];
-        var _name;
-        var _supervisor;
-        return {
-            setUp: function(name, supervisor){
-                _name = name;
-                _supervisor = supervisor;
-            },
-            add: function (employee) {
-                _employees.push(employee)
-            },
-            performanceSummary: function () {
-                document.write("<br>Team: " + _name + "<br>");
-                document.write("Supervisor: " + _supervisor.name + "<br>");
-                document.write("Members Reviews <br>");
-                for (var i in _employees) {
-                    _employees[i].performanceSummary();
-                }
-            }
-        };
-    }
+var Team = function () {
+  var _employees = [];
+  var _name;
+  var _supervisor;
+  return {
+      setUp: function(name, supervisor){
+          _name = name;
+          _supervisor = supervisor;
+      },
+      add: function (employee) {
+          _employees.push(employee)
+      },
+      performanceSummary: function () {
+          document.write("<br>Team: " + _name + "<br>");
+          document.write("Supervisor: " + _supervisor.name + "<br>");
+          document.write("Members Reviews <br>");
+          for (var i in _employees) {
+              _employees[i].performanceSummary();
+          }
+      }
+  };
+}
+```
