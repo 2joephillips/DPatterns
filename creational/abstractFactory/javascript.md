@@ -11,6 +11,6 @@ image:
   thumb:
 ---
 
-<a href="{{ site.url }}/creational/abstractFactory" class="btn"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Abstract Factory Pattern</a>
+<a href="{{ site.url }}/creational/abstractfactory" class="btn"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Abstract Factory Pattern</a>
 
 ![State Pattern Structure](http://www.dofactory.com/images/diagrams/net/abstract.gif)
