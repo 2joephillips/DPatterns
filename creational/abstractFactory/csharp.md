@@ -13,7 +13,7 @@ image:
 
 <a href="{{ site.url }}/creational/abstractfactory" class="btn"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Abstract Factory Pattern</a>
 
-![State Pattern Structure](http://www.dofactory.com/images/diagrams/net/abstract.gif)
+![Abstract Pattern Structure](http://www.dofactory.com/images/diagrams/net/abstract.gif)
 
 To set-up this example,  ASP.NET core is used create a Console Application. The full <a href="https://github.com/2joephillips/DPatterns-Examples/tree/master/creational/abstractFactory/csharp" target="_blank">C Sharp Code Base</a> can be accessed from GitHub.
 
