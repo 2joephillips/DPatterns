@@ -15,7 +15,7 @@ image:
 
 ![State Pattern Structure](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/State_Design_Pattern_UML_Class_Diagram.svg/470px-State_Design_Pattern_UML_Class_Diagram.svg.png)
 
-To set-up this example,  ASP.NET core is used create a Console Application. The full <a href="https://github.com/2joephillips/DPatterns-Examples/tree/master/behavioral/state/csharp" target="_blank">C Sharp Code Base</a> can be accessed from GitHub.
+To set-up this example,  ASP.NET core is used create a Console Application. The full <a href="https://github.com/2joephillips/DPatterns-Examples/tree/master/behavioral/state/csharp" target="_blank">C# Code Base</a> can be accessed from GitHub.
 
 {% include toc.html %}
 
@@ -56,7 +56,7 @@ namespace StateMachineDemo
 ```
 
 ## Context Interface
-The simple interface <code>ITrafficLight</code> manages the "default" behavior that is exposed to the client.
+The simple interface <code>ITrafficLight</code> manages the "default" behavior that is exposed to the client. In this case, we expose a simple set of methods <code>Activate() Deactivate() Update() </code>
 
 ```csharp
 namespace StateMachineDemo{
@@ -69,10 +69,10 @@ namespace StateMachineDemo{
 ```
 
 ## Context
-In this example, the context class is our <code>TrafficLight</code> class, but we still use an interface <code>ITrafficLight</code> to manage default behavior. 
-The <code>TrafficLight</code> class manages the objects current state with a private instance of our <code> ITrafficLightState </code> class called <code>State</code>. 
+The context class is our <code>TrafficLight</code> class, using the interface <code>ITrafficLight</code> to manage default behavior. 
+The <code>TrafficLight</code> class manages the objects current state with a private instance of our <code> ITrafficLightState </code> class called <code>_state</code>. 
 When the class is newed-up from the client, the constructor sets its state to the <code> RedLight </code> state.
-In addition, this classes exposes the methods; <code>Activate()</code> <code>Update()</code> <code>Deactivate()</code> to the client. 
+In addition, this classes implments the methods; <code>Activate()</code> <code>Update()</code> <code>Deactivate()</code> to the client. 
 Within our <code>Update()</code>, the application calls the <code>Change()</code>, that intiates the transition from one state to the next.
 
 ```csharp
@@ -109,7 +109,7 @@ namespace StateMachineDemo
 ```
 
 ## State
-The simple interface <code>ITrafficLightState</code> manages the "default" behavior that is used within the concrete states.
+The simple interface <code>ITrafficLightState</code> manages the default behavior that is used within the concrete states.
 
 ```csharp
 public interface ITrafficLightState
@@ -120,9 +120,9 @@ public interface ITrafficLightState
 
 ## Concrete State Classes
 
-Our Concrete State classes manage the specific implementation of each State (i.e. Green, Red, or Yellow light) For example, the <code>GreenLight</code> class
-implements  <code> Change() </code> method by changing the state to a Red Light State by returning a new <code>RedLight</code> object, waiting for 30 seconds, and printing info to screen. 
-Each concrete class manages thier implementation of the <code>ITrafficLightState</code> based on thats states needs. 
+Our Concrete State classes manage the specific implementation of each state (i.e. Green, Red, or Yellow light) For example, the <code>GreenLight</code> class
+implements  <code> Change() </code> method by and printing info to screen, waiting 30 seconds, and then changing to a YelloLight state. 
+Each concrete class manages thier implementation of the <code>ITrafficLightState.Change()</code> based on thats states needs. 
 
 ```csharp
 using System;
