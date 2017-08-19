@@ -22,7 +22,7 @@ can be accessed from GitHub.
 {% include toc.html %}
 
 ## Set-up
-Within the page, I am using a script tag that I can write the javascript for this example. To start the application, I am using <code>window.onload</code> to call a simple function. This function will use <code>document.write</code> to print two sentences on the screen. Then it will create a new TrafficLight object. Then call the start method on the new TrafficLight Object.
+Within the page, I am using a script tag to maintain all the JavaScript . To start the application, I am using <code>window.onload</code> to call a simple function that will use <code>document.write</code> to print two sentences on the screen. Then it will create a new TrafficLight object and then call the start method.
 
 ```javascript
 window.onload = function() {
@@ -34,10 +34,10 @@ window.onload = function() {
 ```
 
 ## Context Interface
-Since vanilla javascript does not have Interfaces, we will not have this portion which normally has the "default" behavior that is exposed to the client.
+Since vanilla javascript does not have Interfaces, we will not have this portion which normally has the default behavior that is exposed to the client. 
 
 ## Context
-The context class is our <code>TrafficLight</code> object, that contains a functions for <code>start</code> and <code>change</code>. Along with a variable for storing the <code>currentState</code> and <code>count</code>. 
+The context class is our <code>TrafficLight</code> object, that contains a function for <code>start() change()</code>. Along with a variable for storing the <code>currentState</code> and <code>count</code>. 
 
 The change method is used to take in a new state, and then set that new <code>state</code> as the <code>currentState</code>. Then it runs the <code>currentState</code> run method. To stop this for running forever, the <code>count</code> variable is used to ensure that this only runs 10 times.
 
@@ -60,11 +60,12 @@ var TrafficLight = function () {
 ```
 
 ## State
-Since vanilla javascript does not have Interfaces, we will not have this portion which normally has the "default" behavior that is used within the concrete states.
+Since vanilla javascript does not have Interfaces, we will not have this portion which normally has the default behavior that is exposed to the client. 
+
 
 ## Concrete State Classes
 Our Concrete State classes manage the specific implementation of each State (i.e. Green, Red, or Yellow light) For example, the <code>GreenLight</code> class
-implements  <code> run() </code> method by using <code>document.write</code> to write a simple message to the screen to indicate the color, and then waits for couple seconds then calls the <code>light.change</code> method to change the state to a <code>RedLight</code> state. Which starts this process over, with <code>RedLight</code> turning to <code>YellowLight</code> and then back to <code>GreenLight</code>
+implements  <code> run() </code> method by using <code>document.write</code> to write a simple message to the screen to indicate the color, and then waits for couple seconds then calls the <code>light.change</code> method to change the state to a <code>YellowLight</code> state. Which starts this process over, with <code>RedLight</code> turning to <code>YellowLight</code> and then back to <code>GreenLight</code>
 
 ```javascript
 var RedLight = function (light) {
