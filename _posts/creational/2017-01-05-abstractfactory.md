@@ -23,9 +23,10 @@ The purpose of the Abstract Factory is to provide an interface for creating fami
 
 # Structure
 
-![Abstract Factory](http://www.dofactory.com/images/diagrams/net/abstract.gif)
+![Abstract Factory](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Abstract_factory_UML.svg/640px-Abstract_factory_UML.svg.png)
 
-The UML class diagram above describes an implementation of the Abstract Factory design pattern.  
+
+The UML class diagram[<sup>1</sup>](https://en.wikipedia.org/wiki/Abstract_factory_pattern) above describes an implementation of the Abstract Factory design pattern.  
 
 * **Abstract Factory** declares an interface for operations that create abstract products.
 * **Concrete Factory** implements the operations to create concrete product objects.
